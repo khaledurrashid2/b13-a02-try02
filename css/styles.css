@@ -1,14 +1,187 @@
 /* CSS file for Batch 13, Assignment 02 by M Khaledur Rashid */
 
 * {
+    /* reset all the default margin & padding and add Google Font */
     margin: 0;
     padding: 0;
-
+    background-color: #230e3d;
+    /* background-color: aquamarine; */
+    
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight:400;
+    font-weight: 400;
     font-style: normal;
 
-    background-color: teal;
+    color: white;
 }
+
+/* ==================Shared Styles====================== */
+.btn-main {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    
+    /* button linear background as per figma design */
+    background: linear-gradient(47.64deg, rgba(247, 233, 63, 1) 16.531%,rgba(251, 9, 180, 1) 49.819%,rgba(145, 0, 248, 1) 81.648%);
+
+    transition: transform 0.3s ease;
+}
+
+.btn-main:hover {
+    transform: scale(1.05);
+}
+
+.btn-regular {
+    color: #00FF88;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid #00FF88;
+    border-radius: 25px;
+    padding: 10px 20px;
+    transition: transform 0.3s ease;
+}
+
+.btn-regular:hover {
+    transform: scale(1.05);
+}
+
+.btn-small {
+    color: black;
+    background-color: #00FF88;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid #00FF88;
+    border-radius: 15px;
+    padding: 5px 10px;
+    transition: transform 0.3s ease;
+}
+
+.btn-small:hover {
+    transform: scale(1.15);
+}
+
+.btn-main i {
+    background: inherit;
+}
+
+section {
+    margin: 100px 0;
+}
+
+.section-title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.section-title h2 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+
+/* -----------end of 'Shared Styles' part----------- */
+
+/* Header and navbar section */
+header {
+    max-width: 1200px;
+    height: 92px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 32px;
+    width: auto;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Hero-Banner Section */
+.hero-banner {
+    width: 100%;
+    max-width: 1600px;
+    height: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image: url("../assets/hero-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+
+.hero-banner .banner-image {
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    background-image: url("../assets/hero-circle.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+    position: relative;  
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-banner .banner-image img {
+    width: 116px;
+    height: 175px;
+    background: transparent;
+    display: block;
+}
+
+.banner-image .btn-small {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.hero-banner .banner-title {
+    font-size: 3.75rem;
+    font-weight: 900;
+    margin-top: 40px;
+}
+
+.hero-banner .banner-text {
+    font-size: 1rem;
+}
+
+.hero-banner .banner-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+
 
