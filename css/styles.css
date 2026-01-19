@@ -1,0 +1,14 @@
+/* CSS file for Batch 13, Assignment 02 by M Khaledur Rashid */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:400;
+    font-style: normal;
+
+    background-color: teal;
+}
+

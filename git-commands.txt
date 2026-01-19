@@ -1,0 +1,10 @@
+------------Batch 13 - Assignment 02 - Try 02-----------
+
+
+echo "# b13-a02-try02" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/khaledurrashid2/b13-a02-try02.git
+git push -u origin main
