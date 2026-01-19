@@ -135,8 +135,6 @@ nav a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-
 }
 
 .hero-banner .banner-image {
@@ -183,5 +181,153 @@ nav a {
     margin-top: 24px;
 }
 
+
+
+
+/* About The Podcast Section */
+.about-the-podcast {
+    max-width: 1200px;
+    margin:  0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding-top: 50px;
+}
+
+.about-the-podcast .about-section-text01, .about-section-text02 {
+    font-size: 1rem;
+    color: white;
+}
+
+.about-the-podcast .about-section-text01 {
+    margin-bottom: 16px;
+}
+
+/* stats part */
+.stats-part {
+    width: 100%;
+    margin-top: 180px;
+    margin-bottom: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.stats-part h1, i {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #00FF88;
+    margin-bottom: 16px;
+}
+  
+.stats-part h5 {
+    font-size: 1rem;
+}
+
+/* --------------------- */
+
+
+/* Why-Choose Section */
+.why-choose {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #230e3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.why-choose .all-why-choose-contents {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* border: 1px solid white; */
+    padding-bottom: 120px; 
+}
+
+.why-choose .all-why-choose-contents .section-title {
+    text-align: center;
+}
+
+.why-choose .all-why-choose-contents .h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.why-choose-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.why-choose-cards .individual-card {
+    background-color: #2a0f4d;
+    border-radius: 30px;
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.why-choose-cards .individual-card .card-icon {
+    width: 60px;
+    margin-bottom: 16px;
+}
+
+.why-choose-cards .individual-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px; 
+    background-color: #2a0f4d;   
+}
+
+.why-choose-cards .individual-card .card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: #2a0f4d;
+}
+
+
+
+/* ...........arrangement of individual card in the grid layout for desktop screen........... */
+
+/* card-A > 1 column, 2 rows */
+.why-choose-cards .individual-card:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: span 2;
+}
+
+/* card-B: 2 columns, 1 row */
+.why-choose-cards .individual-card:nth-child(2) {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+}
+
+/* card-C: 2 columns, 1 row */
+.why-choose-cards .individual-card:nth-child(3) {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+}
+
+/* card-D: 1 row, 1 column */
+.why-choose-cards .individual-card:nth-child(4) {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+/* card-E: 1 row, 1 column */
+.why-choose-cards .individual-card:nth-child(5) {
+    grid-column: 3 / 3;
+    grid-row: 3 / 4;
+}
 
 
