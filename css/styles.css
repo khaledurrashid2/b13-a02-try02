@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     background-color: #230e3d;
-    /* background-color: aquamarine; */
     
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -74,7 +73,9 @@ section {
 .section-title {
     margin-bottom: 40px;
     text-align: center;
+    background: none;
 }
+
 .section-title h2 {
     font-size: 3rem;
     font-weight: 800;
@@ -83,6 +84,7 @@ section {
 
 /* -----------end of 'Shared Styles' part----------- */
 
+/* ------------------------------- */
 /* Header and navbar section */
 header {
     max-width: 1200px;
@@ -119,6 +121,7 @@ nav a {
 }
 
 
+/* ------------------------- */
 /* Hero-Banner Section */
 .hero-banner {
     width: 100%;
@@ -135,21 +138,33 @@ nav a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 .hero-banner .banner-image {
     width: 350px;
     height: 350px;
     margin: 0 auto;
-    background-image: url("../assets/hero-circle.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;  
-    position: relative;  
+    position: relative;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    background: transparent; 
+}
+
+.hero-banner .banner-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/hero-circle.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0; 
 }
 
 .hero-banner .banner-image img {
@@ -157,79 +172,112 @@ nav a {
     height: 175px;
     background: transparent;
     display: block;
+    z-index: 1;
 }
 
 .banner-image .btn-small {
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: 30px;
+    right: 25px;
+    z-index: 2;
 }
 
 .hero-banner .banner-title {
     font-size: 3.75rem;
     font-weight: 900;
     margin-top: 40px;
+    color: white;
+    z-index: 1;
 }
 
 .hero-banner .banner-text {
     font-size: 1rem;
+    z-index: 1;
 }
 
 .hero-banner .banner-buttons {
     display: flex;
     gap: 16px;
     margin-top: 24px;
+    z-index: 1;
 }
 
 
+/* ------------------------------------ */
+/*    About The Podcast – Section        */
 
-
-/* About The Podcast Section */
 .about-the-podcast {
-    max-width: 1200px;
-    margin:  0 auto;
+    width: 100%;
+    background-color: #14061f;
+    padding: 50px 0 120px;
+}
 
+
+.about-the-podcast .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-
-    padding-top: 50px;
+    background-color: #14061f;
 }
 
-.about-the-podcast .about-section-text01, .about-section-text02 {
+
+.about-the-podcast .section-title h2 {
+    margin: 0;
+    color: #ffffff;
+    background: transparent;
+}
+
+.about-the-podcast .about-section-text01,
+.about-the-podcast .about-section-text02 {
     font-size: 1rem;
-    color: white;
+    color: #ffffff;
+    margin: 0;
+    background-color: transparent;
 }
 
 .about-the-podcast .about-section-text01 {
-    margin-bottom: 16px;
+    margin: 16px 0;
 }
 
-/* stats part */
-.stats-part {
+
+.about-the-podcast .stats-part {
+    max-width: 1200px;          
     width: 100%;
-    margin-top: 180px;
-    margin-bottom: 120px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 160px;           
+    margin-bottom: 120px;        
+    background: transparent;
 }
+
+.about-the-podcast .stat-01 {
+    background-color: transparent;  
+    margin: 0;
+    padding: 0;
+}
+
 .stats-part h1, i {
     font-size: 3rem;
     font-weight: 900;
     color: #00FF88;
     margin-bottom: 16px;
+    background: transparent;
 }
   
 .stats-part h5 {
     font-size: 1rem;
 }
 
+
+
+
 /* --------------------- */
-
-
 /* Why-Choose Section */
+
 .why-choose {
     width: 100%;
     max-width: 1600px;
@@ -252,6 +300,7 @@ nav a {
 }
 
 .why-choose .all-why-choose-contents .section-title {
+    margin-top: 120px;
     text-align: center;
 }
 
@@ -300,70 +349,87 @@ nav a {
 
 /* ...........arrangement of individual card in the grid layout for desktop screen........... */
 
-/* card-A > 1 column, 2 rows */
 .why-choose-cards .individual-card:nth-child(1) {
     grid-column: 1 / 2;
     grid-row: span 2;
 }
 
-/* card-B: 2 columns, 1 row */
 .why-choose-cards .individual-card:nth-child(2) {
     grid-column: 2 / 4;
     grid-row: 1 / 2;
 }
 
-/* card-C: 2 columns, 1 row */
 .why-choose-cards .individual-card:nth-child(3) {
     grid-column: 2 / 4;
     grid-row: 2 / 3;
 }
 
-/* card-D: 1 row, 1 column */
 .why-choose-cards .individual-card:nth-child(4) {
     grid-column: 1 / 3;
     grid-row: 3 / 4;
 }
 
-/* card-E: 1 row, 1 column */
 .why-choose-cards .individual-card:nth-child(5) {
     grid-column: 3 / 3;
     grid-row: 3 / 4;
 }
 
 
+/* ================================ */
+/*    Featured Episodes – Section */
 
-/* Section - 'featured-episodes' */
 .featured-episodes {
     max-width: 1600px;
     margin: 0 auto;
+    padding: 120px 0 60px 0;
+    background-color: #1a0b2e;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #1a0b2e;
 }
 
 .featured-episodes .section-title {
-    margin-top: 120px;
-}
-
-.podcast-cards {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
     max-width: 1200px;
+    margin: 0 auto 64px;
+    text-align: center;
+    background: transparent;
 }
 
-.podcast-cards .each-podcast-card {
-    background-color: #250D44;
-    border-radius: 30px;
-    max-width: 350px;
+.featured-episodes .section-title h2 {
+    margin: 0;
+    background: transparent;
+    width: auto;
+    color: #ffffff;
+}
+
+.featured-episodes .podcast-cards {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;                 
+    justify-content: flex-start; 
+    padding: 0;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+
+.featured-episodes .each-podcast-card {
+    width: 380; 
     display: flex;
     flex-direction: column;
+    border-radius: 30px;
+    background-color: #250D44;
     overflow: hidden;
-
 }
 
-.podcast-cards .each-podcast-card .card-image img {
+
+.featured-episodes .card-image {
+    background: transparent;
+}
+
+.featured-episodes .card-image img {
     width: 100%;
     display: block;
     border-radius: 30px 30px 0 0;
@@ -371,131 +437,221 @@ nav a {
     cursor: pointer;
 }
 
-.podcast-cards .each-podcast-card .card-text-contents {
-    background: transparent;
+.featured-episodes .card-text-contents {
     padding: 24px;
-    color: white;
+    color: #ffffff;
+    background: transparent;
 }
 
-.card-text-contents > * {
+.featured-episodes .card-text-contents > * {
     margin-bottom: 12px;
+    background: transparent;
 }
 
-.podcast-cards .each-podcast-card .card-title {
+.featured-episodes .card-title {
     font-size: 1.5rem;
     font-weight: 700;
-    background-color: #250D44;
+    color: #ffffff;
+    background: transparent;
 }
 
-.podcast-cards .each-podcast-card .card-description {
+.featured-episodes .card-description {
     font-size: 1rem;
-    background-color: #250D44;
-    /* font-weight: 400;   */
+    color: #ffffff;
+    background: transparent;
 }
 
-.podcast-cards .each-podcast-card .card-clock {
-    color: #00FF88;
-    background-color: #250D44;
+.featured-episodes .card-clock {
     font-size: 1rem;
     font-weight: 600;
-}
-
-.podcast-cards .each-podcast-card .card-clock i {
     color: #00FF88;
-    font-size: 1rem;
+    background: transparent;
+}
+
+.featured-episodes .card-clock i {
     padding-right: 10px;
-}
-
-.podcast-cards .each-podcast-card .clickable-image {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  cursor: pointer;
-}
-
-.podcast-cards .each-podcast-card .clickable-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: #00FF88;
+    background: transparent;
+    font-size: 1rem;
 }
 
 
-/* /////////// */
+.featured-episodes .clickable-image {
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.featured-episodes .clickable-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
 
 
 
-/* Meet the host section */
+/* ================================ */
+/* Meet the Host – Section  */
+
 .meet-the-host {
-    max-width: 1200px;
+    max-width: 1600px;          
     margin: 0 auto;
-    padding: 120px 0;
-    background-color: #1a0b2e;
-}
-
-.image-and-text-container {
+    padding: 60px 0 120px 0;
     display: flex;
-    flex-direction: row;
-    gap: 24px;
-    padding: 24px 40px;
-    border-radius: 25px;
-    background-color: #1a0b2d;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a0b2e;  
 }
 
-/* .meet-the-host .section-title {
-    margin-top: 120px;
-} */
+.meet-the-host .section-title {
+    max-width: 1200px;          
+    margin: 0 auto 64px;        
+    text-align: center;
+    background: transparent;
+}
 
-.host-image img {
+.meet-the-host .section-title h2 {
+    margin: 0;
+    width: auto;
+    color: #ffffff;
+    background-color: transparent; 
+}
+
+.meet-the-host .image-and-text-container {
+    max-width: 1200px;         
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    padding: 32px 40px;
+    border-radius: 25px;
+    background-color: #0e0619;  
+    box-sizing: border-box;      
+}
+
+.meet-the-host .host-image {
+    background: transparent;
+    flex-shrink: 0;            
+}
+
+.meet-the-host .host-image img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
+    display: block;
     transition: transform 0.3s ease;
 }
 
-.host-image img:hover {
+.meet-the-host .host-image img:hover {
     transform: scale(1.05);
 }
 
-.text-and-icons {
+.meet-the-host .text-and-icons {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 16px;
+    justify-content: flex-start;
+    background: transparent;
 }
 
-.text-and-icons .text-title {
+.meet-the-host .text-title {
+    margin: 0;
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 16px;
+    color: #ffffff;
+    background: transparent;
+}
+
+.meet-the-host .text-details {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    background: transparent;
+}
+
+.meet-the-host .host-social-icons {
+    display: flex;
+    gap: 16px;
+    background: transparent;
+}
+
+.meet-the-host .social-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(221, 56, 194);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+}
+
+.meet-the-host .social-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+    background: transparent;
 }
 
 
-.text-and-icons .text-details { 
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 16px;
-} 
+/* -------------------------------------- */
+/* Footer Section */
+footer {
+    width: 100%;
+    max-width: 1600px;
+    min-height: 412px;
+    margin: 0 auto;
+    background: url("../assets/footer-bg.png") no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
 
-.host-social-icons {
+footer .logo-part img {
+    max-height: 60px;
+    background: transparent;
+}
+
+footer .social-icons {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 16px;
+    justify-content: center;  
+    gap: 50px;               
+    margin: 32px 0;
+    width: 100%;
+    max-width: 1200px;        
+    background: transparent;
+    box-sizing: border-box;
 }
 
-.social-icon {
-    width: 40px;              
-    height: 40px;
-    border: 1px solid rgb(221, 56, 194);  
-    border-radius: 50%;       
-    display: flex;            
+footer .social-icons i {
+    font-size: 1.25rem;
+    color: white;
+    background: transparent;
+    display: block;
+}
+
+footer .social-icons p {
+    display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 20px;                 
+    font-size: 1rem;
+    color: white;
+    margin: 0;
+    background: transparent;
 }
 
-.social-icon img {
-    width: 20px;              
-    height: 20px;
-    object-fit: contain;
-    border-radius: 50%;      
+footer .footer-copyright {
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+    background: transparent;
 }
-
-
