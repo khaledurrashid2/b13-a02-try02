@@ -721,6 +721,142 @@ footer .footer-copyright {
     }
 
 
+    /* 'hero-banner' section */
+    .hero-banner {
+        height: auto;
+        padding: 40px 20px;
+        background-size: cover;
+        width: 100vw;
+        max-width: 100%;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        /* the above two lines of formula used after asking about it to chatgpt so that the centered content remains centered for any screen width upto the mobile screen max width defined by the media query */
+        box-sizing: border-box;
+    }
+
+    .hero-banner .banner-image {
+        width: 250px;
+        height: 250px;
+        max-width: 90%;
+    }
+    .hero-banner .banner-image img {
+        width: 90px;
+        height: 135px;
+    }
+
+    .banner-image .btn-small {
+        top: 20px;
+        right: 15px;
+        font-size: 1rem;
+        padding: 6px 10px;
+    }
+
+    .hero-banner .banner-title {
+        font-size: 2.25rem;
+        margin-top: 30px;
+        padding: 0 10px;
+        max-width: 100%;
+    }
+
+    .hero-banner .banner-text {
+        padding: 0 10px;
+        margin-top: 12px;
+        max-width: 100%;
+    }
+
+    .hero-banner .banner-buttons {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .hero-banner .banner-buttons button {
+        max-width: calc(50% - 5px);
+    }
+
+    /* About the podcast section */
+    .about-the-podcast {
+        padding: 50px 0 80px;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        box-sizing: border-box;
+    }
+
+    .about-the-podcast .content-wrapper {
+        padding: 0 20px;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .about-the-podcast .section-title {
+        padding: 0;
+        width: 100%;
+    }
+
+    .about-the-podcast .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .about-the-podcast .about-section-text01,
+    .about-the-podcast .about-section-text02 {
+        text-align: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    /* ---- grey colored line on top of the stats part ---- */
+    .about-the-podcast .stats-part::before {
+        content: "";
+        display: block;
+        width: calc(100% - 40px);
+        height: 1px;
+        background-color: grey;
+        position: absolute;
+        top: -40px;
+        left: 20px;
+    }
+
+    .about-the-podcast .stats-part {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-top: 80px;
+        margin-bottom: 60px;
+        position: relative;
+        padding: 0 20px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .about-the-podcast .stat-01 {
+        text-align: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    .stats-part h1, .stats-part i {
+        font-size: 2.5rem;
+        margin-bottom: 8px;
+    }
+
+    .stats-part h5 {
+        font-size: 0.9ren;
+        background: transparent;
+    }
+
+
+
 /* ------------ responsive code ends here ------------- */
 
 }
